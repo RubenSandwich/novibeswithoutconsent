@@ -6,6 +6,17 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #CDCDCD;
+      }
+      p {
+        margin: 0;
+      }
+      footer {
+        background-color: #979797;
+      }
+
       .buy-now-button {
         width: 300px;
         height: 50px;
@@ -22,7 +33,6 @@
         70% { transform: scale(1); }
         100% { transform: scale(1); }
       }
-
       .pulse {
         animation-name: pulse-animation;
         animation-duration: 1s;
@@ -30,18 +40,130 @@
         animation-iteration-count: infinite;
         animation-timing-function: linear;
       }
-      .columns {
+      .half-width {
+        flex: 0.5;
+      }
+      .column {
         display: flex;
         flex-direction: column;
+      }
+      .row {
+        display: flex;
+        flex-direction: row;
+      }
+      .circle {
+        width: 50px;
+        height: 50px;
+        background-color: #7B7B7B;
+        border-radius: 50%;
+      }
+      .center {
         align-items: center;
+        justify-content: center;
+      }
+      .outline {
+        border: 2px #333333 solid;
+        border-left: 0;
+      }
+      .padding-bottom {
+        padding-bottom: 2rem;
+      }
+      h1, h2, h3, h4, h5, h6 {
+        margin-bottom: 0;
       }
     </style>
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
   </head>
   <body>
     <div class="columns">
       <button class="buy-now-button" id="vibesToggle">START Vibes</button>
       <button class="buy-now-button" id="vibing">Buy Now</button>
     </div>
+
+    <div class="row padding-bottom">
+      <h1>No Vibes without Consent</h1>
+    </div>
+
+    <div class="row padding-bottom">
+      <div class="column half-width">
+        <h2>Copy copy about the problem</h2>
+        <p>Why we need to change the problem and create a sense of urgency explaining why</p>
+        <div class="row">
+          <div class="slider"></div>
+          <p>I consent to having my phone vibrate</p>
+        </div>
+      </div>
+      <div class="column half-width">
+        <div class="button">Buy our Bullshit</div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="column outline half-width">
+        <h2>What needs to change?</h2>
+      </div>
+      <div class="column outline half-width padding-bottom">
+        <h3>#1 Permission gated Vibration API</h3>
+        <p> this is a short description of why</p>
+        <h3>#2 Vibration respect should “prefers-reduced-motion”</h3>
+        <p> this is a short description of why</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="column outline half-width">
+        <h2>What are we proposing as a solution?</h2>
+      </div>
+      <div class="column outline half-width padding-bottom">
+        <h3>#1 Push for Standards change</h3>
+        <p> this is a short description of why</p>
+        <h3>#2 Polyfil</h3>
+        <p> this is a short description of why</p>
+      </div>
+    </div>
+
+    <div class="row center padding-bottom">
+      <div class="column center">
+        <div class="padding-bottom">
+          <h3>credit to folks who have worked on this in the past</h3>
+        </div> 
+        <div class="row">
+          <div class="column">
+            <div class="circle"></div>
+            Person 1
+            <u href>@twitter</u>
+          </div>
+          <div class="column">
+            <div class="circle"></div>
+            Person 2
+            <u href>@twitter</u>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="column center padding-bottom">
+      <div class="padding-bottom">
+        <h4>Good Vibes from</h4>
+      </div>
+      <div class="row">
+        <div class="row">
+          <div class="circle"></div>
+          <div class="column">
+            Meghan Martin
+            <u href="">@twitter</u>
+          </div>
+        </div>
+        <div class="row">
+          <div class="circle"></div>
+          <div class="column">
+            Ruben Nic
+            <u href="">@twitter</u>
+          </div>
+        </div>
+      </div>
+    </footer>
 
 
     <script>
@@ -76,5 +198,7 @@
         };
       });
     </script>
+    <script data-goatcounter="https://novibes.goatcounter.com/count"
+    async src="//gc.zgo.at/count.js"></script>
   </body>
 </html>
