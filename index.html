@@ -46,10 +46,12 @@
       .column {
         display: flex;
         flex-direction: column;
+        padding: 0 2em;
       }
       .row {
         display: flex;
         flex-direction: row;
+        padding: 0 2em;
       }
       .circle {
         width: 50px;
@@ -61,9 +63,14 @@
         align-items: center;
         justify-content: center;
       }
-      .outline {
-        border: 2px #333333 solid;
-        border-left: 0;
+      .border-top {
+        border-top: 2px #333333 solid;
+      }
+      .border-bottom {
+        border-bottom: 2px #333333 solid;
+      }
+      .border-right {
+        border-right: 2px #333333 solid;
       }
       .padding-bottom {
         padding-bottom: 2rem;
@@ -72,6 +79,7 @@
         margin-bottom: 0;
       }
     </style>
+    <link href="normalize.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com"> 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
   </head>
@@ -99,11 +107,11 @@
       </div>
     </div>
 
-    <div class="row">
-      <div class="column outline half-width">
+    <div class="row border-top">
+      <div class="column border-right half-width">
         <h2>What needs to change?</h2>
       </div>
-      <div class="column outline half-width padding-bottom">
+      <div class="column half-width padding-bottom">
         <h3>#1 Permission gated Vibration API</h3>
         <p> this is a short description of why</p>
         <h3>#2 Vibration respect should “prefers-reduced-motion”</h3>
@@ -111,11 +119,11 @@
       </div>
     </div>
 
-    <div class="row">
-      <div class="column outline half-width">
+    <div class="row border-top border-bottom">
+      <div class="column border-right half-width">
         <h2>What are we proposing as a solution?</h2>
       </div>
-      <div class="column outline half-width padding-bottom">
+      <div class="column half-width padding-bottom">
         <h3>#1 Push for Standards change</h3>
         <p> this is a short description of why</p>
         <h3>#2 Polyfil</h3>
